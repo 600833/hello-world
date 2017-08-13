@@ -1,0 +1,12 @@
+[root@satellite1 lib]# foreman-rake console
+/opt/theforeman/tfm/root/usr/share/gems/gems/foreman_theme_satellite-0.1.42/app/models/concerns/satellite_packages.rb:4: warning: already initialized constant Katello::Ping::PACKAGES
+/opt/theforeman/tfm/root/usr/share/gems/gems/katello-3.0.0.124/app/models/katello/ping.rb:7: warning: previous definition of PACKAGES was here
+/usr/share/foreman/lib/tasks/console.rake:4: warning: already initialized constant ARGV
+Loading production environment (Rails 4.1.5)
+
+irb(main):001:0> ForemanTasks::Task.where(:state => :paused).destroy_all
+
+=> [#<ForemanTasks::Task::DynflowTask id: "dec19fa5-2b6e-4631-8507-4e192e94d3c0", type: "ForemanTasks::Task::DynflowTask", label: "Actions::Katello::ContentView::Publish", started_at: "2017-08-12 22:26:27", ended_at: nil, state: "paused", result: "error", external_id: "9a762eae-a1a8-415b-aed4-1fb626d2636f", parent_task_id: nil, start_at: "2017-08-12 22:26:27", start_before: nil>, #<ForemanTasks::Task::DynflowTask id: "9c95c232-c128-41e3-9a1f-bb47f2bfd9c8", type: "ForemanTasks::Task::DynflowTask", label: "Actions::Candlepin::ListenOnCandlepinEvents", started_at: "2017-08-12 19:15:26", ended_at: nil, state: "paused", result: "pending", external_id: "e0c57944-9183-4fa2-a91c-93688c26e5d1", parent_task_id: nil, start_at: "2017-08-12 19:15:26", start_before: nil>, #<ForemanTasks::Task::DynflowTask id: "56005068-781f-4d50-a18b-86dba2150dd1", type: "ForemanTasks::Task::DynflowTask", label: "Actions::Katello::Repository::Destroy", started_at: "2017-07-24 22:00:52", ended_at: nil, state: "paused", result: "error", external_id: "f9cc0787-59ad-4691-ae1b-ccfcac6906bc", parent_task_id: "375cc762-149e-442b-8b9e-5c29baa872b2", start_at: "2017-07-24 22:00:52", start_before: nil>]
+irb(main):002:0> ForemanTasks::Task.where(:state => :paused).destroy_all
+
+Session terminated, killing shell...
